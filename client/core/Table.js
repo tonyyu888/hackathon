@@ -18,6 +18,11 @@ const useStyles = makeStyles({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  detail: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
   categoryText: {
     textAlign: 'center',
   },
@@ -29,15 +34,16 @@ export default function BasicTable() {
 
   const [rows, setRows] = useState([]);
 
-  useEffect(() => {
-    const getinfo = async () => {
-      let response = await fetch('/api/posts/all');
-      let data = await response.json();
-      console.log("Data found", data[3])
-      setRows(data);
-    };
-    getinfo();
-  }, []);
+
+  // useEffect(() => {
+  //   const getinfo = async () => {
+  //     let response = await fetch('/api/posts/all');
+  //     let data = await response.json();
+  //     console.log("Data found", data[3])
+  //     setRows(data);
+  //   };
+  //   getinfo();
+  // }, []);
 
   const classes = useStyles();
 
@@ -56,7 +62,7 @@ export default function BasicTable() {
         <TableBody>
             <TableRow>
               <TableCell><img src={td1}/></TableCell>
-              <TableCell></TableCell>
+              <TableCell className={classes.detail}>test</TableCell>
               <TableCell></TableCell>
               <TableCell></TableCell>
               <TableCell></TableCell>
