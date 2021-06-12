@@ -4,10 +4,10 @@ import { green, orange } from '@material-ui/core/colors'
 const theme = createMuiTheme({
     palette: {
       primary: {
-      light: '#52c7b8',
-      main: '#009688',
-      dark: '#00675b',
-      contrastText: '#fff',
+        light: '#379683',
+        main: '#05386b',
+        dark: '#55bcc9',
+        contrastText: '#fff',
     },
     secondary: {
       light: '#ffd95b',

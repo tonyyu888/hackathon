@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { PermMedia, ThumbUp, ThumbDown } from '@material-ui/icons';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core';
-import TabackgroundImg from './../assets/images/world-back2.jpg';
+import TabackgroundImg from './../assets/images/moneyback.jpg';
+import td1 from './../assets/images/td1.jpg';
 
 
 const useStyles = makeStyles({
@@ -46,24 +46,21 @@ export default function BasicTable() {
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell><PermMedia /></TableCell>
-            <TableCell className={classes.title}>Category</TableCell>
-            <TableCell className={classes.title}>Post</TableCell>
-            <TableCell><ThumbUp /></TableCell>
-            <TableCell><ThumbDown /></TableCell>
-
+            <TableCell className={classes.title}>Credit cards</TableCell>
+            <TableCell className={classes.title}>Annual Fee</TableCell>
+            <TableCell className={classes.title}>Interest: Purchases</TableCell>
+            <TableCell className={classes.title}>Interest: Cash Advances</TableCell>
+            <TableCell className={classes.title}>Additional Cardholder</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.name}>
-              <TableCell>{row.photo && <img className={classes.media} src={'/api/posts/photo/' + row._id} />}</TableCell>
-              <TableCell className={classes.categoryText}>{row.category}</TableCell>
-              <TableCell>{row.text.length > 150 ? row.text.substr(0, 150) + '...' : row.text}</TableCell>
-              <TableCell>{row.likes.length}</TableCell>
-              <TableCell>{row.dislikes.length}</TableCell>
+            <TableRow>
+              <TableCell><img src={td1}/></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
             </TableRow>
-          ))}
         </TableBody>
       </Table>
     </TableContainer>
