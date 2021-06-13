@@ -57,15 +57,16 @@ export default function BasicTable() {
             <TableCell className={classes.title}>Interest: Purchases</TableCell>
             <TableCell className={classes.title}>Interest: Cash Advances</TableCell>
             <TableCell className={classes.title}>Additional Cardholder</TableCell>
+            <TableCell className={classes.title}>Rewards</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
             <TableRow>
-              <TableCell><img src={td1}/></TableCell>
-              <TableCell className={classes.detail}>test</TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
+              <TableCell className={classes.detail}><img src={td1}/>TD All-Inclusive Banking Plan</TableCell>
+              <TableCell className={classes.detail}>$120</TableCell>
+              <TableCell className={classes.detail}>20.99%</TableCell>
+              <TableCell className={classes.detail}>22.99%</TableCell>
+              <TableCell className={classes.detail}>$50</TableCell>
             </TableRow>
         </TableBody>
       </Table>
