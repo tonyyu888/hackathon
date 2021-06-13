@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core';
 import TabackgroundImg from './../assets/images/moneyback.jpg';
-import tdc1 from './../assets/images/allInclusiveChequing-Account.svg';
+//import tdc1 from './../assets/images/allInclusiveChequing-Account.svg';
+import tdc1 from './../assets/images/TDAeroplanVisaInfiniteCard.jpg';
 import tdc2 from './../assets/images/unlimitedChequing-Account.svg';
 import tdc3 from './../assets/images/everydayChequing-Account.svg';
 import tdc4 from './../assets/images/minimumChequing-Account.svg';
 import tdc5 from './../assets/images/studentAccount.svg';
 
+import Image from "material-ui-image";
 
 const useStyles = makeStyles({
   root: {
@@ -31,7 +33,9 @@ const useStyles = makeStyles({
     textAlign: 'center',
   },
   table: { textAlign: 'left' },
-  media: { maxWidth: 60 }
+  media: {
+        objectFit: 'contain',
+ }
 });
 
 export default function BasicTable() {
@@ -66,7 +70,8 @@ export default function BasicTable() {
         </TableHead>
         <TableBody>
             <TableRow>
-              <TableCell className={classes.detail}><img src={tdc1}/>TD All-Inclusive Banking Plan</TableCell>
+              {/* <TableCell className={classes.detail}><img src={tdc1}/>TD All-Inclusive Banking Plan</TableCell> */}
+              <TableCell className={classes.detail}><Image src={tdc1}/>TD All-Inclusive Banking Plan</TableCell>
               <TableCell className={classes.detail}>Up to $400*</TableCell>
               <TableCell className={classes.detail}>$29.95</TableCell>
               <TableCell className={classes.detail}>$5,000</TableCell>
